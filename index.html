@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ИПК — персонализированная адаптированная к рынку труда подготовка</title>
+<meta name="description" content="Демонстрационная витрина интеллектуального программного комплекса: диагностика готовности, тестирование по специализациям, рекомендации, проектная деятельность с ТЗ.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;background:#f3f4f6;color:#111827;line-height:1.6;font-size:16px}
+.wrap{max-width:1000px;margin:0 auto;padding:28px 22px}
+header{background:linear-gradient(120deg,#1e1b4b,#312e81,#1d4ed8);color:#fff;padding:52px 22px;text-align:center}
+header .wrap{padding:0 22px}
+header h1{font-size:clamp(24px,4vw,40px);font-weight:800;letter-spacing:-.5px;margin-bottom:14px}
+header p{opacity:.92;max-width:760px;margin:0 auto 8px}
+.badge{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:5px 16px;font-size:13.5px;margin:4px 4px 0}
+section{margin:34px 0}
+h2{font-size:24px;margin-bottom:6px;border-left:4px solid #3b82f6;padding-left:12px}
+.note{color:#6b7280;font-size:14px;margin-bottom:14px}
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:20px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tile{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px;text-align:center}
+.tile .v{font-size:34px;font-weight:800}
+.tile .l{color:#6b7280;font-size:13px}
+.ok{color:#15803d;font-weight:700}
+table{width:100%;border-collapse:collapse;font-size:14.5px;background:#fff}
+th,td{border:1px solid #e5e7eb;padding:10px 12px;text-align:center}
+th{background:#f9fafb;font-weight:600}
+td:first-child,th:first-child{text-align:left;font-weight:600}
+.p{background:#dcfce7;color:#15803d;font-weight:700}
+.f{background:#fee2e2;color:#b91c1c;font-weight:700}
+.n{color:#9ca3af}
+ul{margin:0 0 0 20px}
+li{margin:4px 0}
+.links a{display:block;background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:10px 14px;margin:8px 0;text-decoration:none;color:#1d4ed8;font-weight:600;font-size:14.5px}
+.links a:hover{border-color:#3b82f6}
+.src{color:#9ca3af;font-size:12.5px}
+footer{border-top:1px solid #e5e7eb;margin-top:40px;padding:22px;color:#9ca3af;font-size:13px;text-align:center}
+.stage{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid #f1f5f9;font-size:14.5px}
+.stage b{font-weight:600}
+.stage span{color:#6b7280;white-space:nowrap}
+@media(max-width:720px){.grid2,.grid4{grid-template-columns:1fr 1fr}th,td{padding:7px 5px;font-size:13px}}
+@media(max-width:520px){.grid4{grid-template-columns:1fr 1fr}.grid2{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1>Персонализированная адаптированная к рынку труда подготовка</h1>
+    <p>Интеллектуальный программный комплекс (ИПК): диагностика готовности, тестирование по цифровым специализациям, рекомендации, проектная деятельность с генерацией тем и ТЗ.</p>
+    <span class="badge">Демонстрационная витрина системы</span>
+    <span class="badge">Данные студента 6 семестра</span>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section id="diag">
+  <h2>1. Диагностика профессиональной готовности</h2>
+  <p class="note">Когнитивный компонент рассчитывается автоматически — как среднее арифметическое результатов тестирования всех цифровых специализаций за текущий семестр.</p>
+  <div class="grid4">
+    <div class="tile"><div class="v">63</div><div class="l">Когнитивный (авто)</div></div>
+    <div class="tile"><div class="v">87</div><div class="l">Деятельностный</div></div>
+    <div class="tile"><div class="v">73</div><div class="l">Мотивационный</div></div>
+    <div class="tile"><div class="v">80</div><div class="l">Личностный</div></div>
+  </div>
+</section>
+
+<section id="map">
+  <h2>2. Карта тестирования по специализациям</h2>
+  <p class="note">Каждая ячейка — результат теста по кластеру за семестр. Зелёный — пройдено (30+), красный — не сдано (25 и меньше), «—» — не проходилось.</p>
+  <table>
+    <tr><th>Кластер</th><th>3 сем</th><th>4 сем</th><th>5 сем</th><th>6 сем</th><th>7 сем</th><th>8 сем</th></tr>
+    <tr><td>Веб-разработка</td><td class="p">55</td><td class="n">—</td><td class="p">72</td><td class="p">80</td><td class="n">—</td><td class="n">—</td></tr>
+    <tr><td>Мобильная разработка</td><td class="p">50</td><td class="p">55</td><td class="p">60</td><td class="p">62</td><td class="n">—</td><td class="n">—</td></tr>
+    <tr><td>Геймдев</td><td class="p">40</td><td class="p">45</td><td class="p">44</td><td class="p">50</td><td class="n">—</td><td class="n">—</td></tr>
+    <tr><td>1С / ERP</td><td class="n">—</td><td class="p">50</td><td class="p">55</td><td class="p">60</td><td class="n">—</td><td class="n">—</td></tr>
+    <tr><td>Данные и ML</td><td class="p">50</td><td class="p">60</td><td class="p">65</td><td class="p">70</td><td class="n">—</td><td class="n">—</td></tr>
+    <tr><td>Кибербезопасность</td><td class="p">48</td><td class="p">52</td><td class="p">55</td><td class="p">58</td><td class="n">—</td><td class="n">—</td></tr>
+  </table>
+</section>
+
+<section id="rec">
+  <h2>3. Рекомендации по цифровой специализации</h2>
+  <p class="note">Score = w₁·Компетенция + w₂·Интерес + w₃·Индекс рынка (log-нормированный прогноз вакансий на 12 месяцев).</p>
+  <table>
+    <tr><th>Кластер</th><th>Компетенция</th><th>Интерес</th><th>Индекс рынка</th><th>Скоринг</th></tr>
+    <tr><td>Веб-разработка</td><td>80</td><td>100</td><td>80</td><td class="p">84,5</td></tr>
+    <tr><td>Данные и ML</td><td>70</td><td>70</td><td>88</td><td>75,8</td></tr>
+    <tr><td>1С / ERP</td><td>60</td><td>30</td><td>100</td><td>66,4</td></tr>
+    <tr><td>Кибербезопасность</td><td>58</td><td>30</td><td>82</td><td>59,6</td></tr>
+    <tr><td>Мобильная разработка</td><td>62</td><td>30</td><td>68</td><td>56,7</td></tr>
+    <tr><td>Геймдев</td><td>50</td><td>30</td><td>70</td><td>52,1</td></tr>
+  </table>
+  <p class="note" style="margin-top:10px">Рекомендованная специализация — <b>Веб-разработка</b> (максимальный скоринг 84,5). Резервная — «Данные и ML» (75,8).</p>
+</section>
+
+<section id="project">
+  <h2>4. Проектная деятельность: тема и техническое задание</h2>
+  <p class="note">Предмет «Учебная практика» (4 семестр). Тема сгенерирована нейросетью GigaChat с учётом специализации студента и подтверждена к выполнению.</p>
+  <div class="card">
+    <p><b>Тема:</b> Создание онлайн-магазина с использованием популярных фреймворков (Vue.js, React)</p>
+    <p class="note">Источник генерации: GigaChat</p>
+    <h3 style="margin:10px 0 4px">Цель</h3>
+    <p>Создать функциональный онлайн-магазин с каталогом товаров, корзиной покупок и системой оформления заказов</p>
+    <h3 style="margin:10px 0 4px">Стек</h3>
+    <p><span class="mini">HTML/CSS</span> <span class="mini">JavaScript</span> <span class="mini">Vue.js/React</span> <span class="mini">Node.js</span> <span class="mini">Git</span></p>
+    <h3 style="margin:10px 0 4px">Задачи</h3>
+    <ul>
+      <li>Разработать интерфейс магазина с помощью Vue.js/React</li>
+      <li>Реализовать серверную часть с помощью Node.js для обработки заказов и управления товарами</li>
+      <li>Интегрировать систему оплаты через популярные API платёжных сервисов</li>
+      <li>Создать административную панель для добавления, редактирования и удаления товаров</li>
+      <li>Подготовить документацию проекта и провести демонстрацию работы приложения</li>
+      <li>Создать репозиторий проекта в Git и оформить коммиты согласно стандартам разработки</li>
+    </ul>
+    <h3 style="margin:10px 0 4px">Ожидаемый результат</h3>
+    <p>Функциональный веб-сайт онлайн-магазина с возможностью просмотра каталога, добавления товаров в корзину, оформления заказа и администрирования товаров</p>
+    <h3 style="margin:12px 0 4px">Этапы и примерные даты</h3>
+    <div class="stage"><b>Анализ предметной области и аналогов</b><span>2026-10-22 — 2026-10-28</span></div>
+    <div class="stage"><b>Проектирование архитектуры и интерфейса</b><span>2026-10-29 — 2026-11-11</span></div>
+    <div class="stage"><b>Разработка прототипа (MVP)</b><span>2026-11-12 — 2026-12-02</span></div>
+    <div class="stage"><b>Реализация основной функциональности</b><span>2026-12-03 — 2026-12-16</span></div>
+    <div class="stage"><b>Тестирование и отладка</b><span>2026-12-17 — 2026-12-23</span></div>
+    <div class="stage"><b>Документация и подготовка защиты</b><span>2026-12-24 — 2026-12-30</span></div>
+  </div>
+</section>
+
+<section id="courses">
+  <h2>5. Профильные курсы (бесплатные)</h2>
+  <p class="note">Рекомендованные курсы профильного уровня по специализации «Веб-разработка».</p>
+  <div class="links">
+    <a href="https://www.theodinproject.com" target="_blank" rel="noopener">The Odin Project — путь фронтенд/бэкенд (React, Node.js) ↗</a>
+    <a href="https://www.freecodecamp.org/learn" target="_blank" rel="noopener">freeCodeCamp — JavaScript, Backend Development ↗</a>
+    <a href="https://practicum.yandex.ru/web/" target="_blank" rel="noopener">Яндекс Практикум — основы веб-разработки (вводная часть) ↗</a>
+  </div>
+</section>
+
+<section id="articles">
+  <h2>6. Рекомендуемые статьи (6 семестр)</h2>
+  <p class="note">Актуальные публикации по специализации (RU/EN).</p>
+  <div class="links">
+    <a href="https://habr.com/ru/articles/839372" target="_blank" rel="noopener">Хабр — «Истории и боли frontend-разработчика» (RU) ↗</a>
+    <a href="https://habr.com/ru/articles/831726" target="_blank" rel="noopener">Хабр — сравнение React, Angular и Vue (RU) ↗</a>
+    <a href="https://web.dev/learn/accessibility" target="_blank" rel="noopener">web.dev — Learn Accessibility (EN) ↗</a>
+    <a href="https://web.dev/learn/performance" target="_blank" rel="noopener">web.dev — Learn Performance (EN) ↗</a>
+    <a href="https://web.dev/articles/vitals" target="_blank" rel="noopener">web.dev — Core Web Vitals (EN) ↗</a>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    Интеллектуальный программный комплекс «Персонализированная адаптированная к рынку труда подготовка» · Демонстрационная витрина · 2026
+  </div>
+</footer>
+
+</body>
+</html>
